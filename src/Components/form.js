@@ -1,11 +1,17 @@
-import React from "react"
+import React from "react";
 
-const Form=()=>{
+const Form = () => {
+  const inputTextChangeHandler = (e) => {
+    console.log(e.target.value);
+  };
 
-    return(
-
-        <form>
-      <input type="text" className="todo-input" />
+  return (
+    <form>
+      <input
+        onChange={inputTextChangeHandler}
+        type="text"
+        className="todo-input"
+      />
       <button className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
@@ -17,8 +23,7 @@ const Form=()=>{
         </select>
       </div>
     </form>
-    )
+  );
+};
 
-}
-
-export default Form
+export default Form;
