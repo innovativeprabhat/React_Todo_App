@@ -1,7 +1,8 @@
 import React from "react";
 
-const Form = () => {
+const Form = ({ setInputText }) => {
   const inputTextChangeHandler = (e) => {
+    setInputText(e.tar.value);
     console.log(e.target.value);
   };
 
